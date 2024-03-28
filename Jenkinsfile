@@ -13,7 +13,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t arulcharlesj/devops-integration .'
+                    sh 'docker build -t  arulcharlesj/devops-integration .'
                 }
             }
         }
@@ -31,7 +31,7 @@ pipeline {
         stage('Deploy to k8s'){
             steps{
                 script{
-                    dockerDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'k8sconfigpwd')
+                    kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'k8sconfigpwd')
                 }
             }
         }
