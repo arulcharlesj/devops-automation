@@ -39,7 +39,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
             <configuration>
-                <mainClass>com.example.MyApplication</mainClass>
+                <mainClass>DevopsIntegrationApplication</mainClass>
             </configuration>
             <executions>
                 <execution>
